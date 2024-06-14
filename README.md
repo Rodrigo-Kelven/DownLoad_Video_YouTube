@@ -3,4 +3,4 @@ Este repositorio ainda será muito atualizado, para proporcionar maior experiên
 
 IMPORTANTE!!!!!!!
 
-Antes de clonar este repositório, veja a pasta requirements.txt e faça download das suas respectivas dependências!
+Antes de clonar este repositório, veja a pasta Tutorial e faça download das suas respectivas dependências!
