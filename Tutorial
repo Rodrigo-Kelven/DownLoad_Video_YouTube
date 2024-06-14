@@ -1,4 +1,4 @@
-1°) Primeiramente instale o módulo nescessário para a execução do programa:
+1°) Primeiramente instale o módulo nescessário para a execução do programa no seu terminal de linha de comando:
 
 pip install yt-dlp
 
