@@ -1,10 +1,7 @@
-1°) Primeiramente instale o módulo nescessário para a execução do programa no seu terminal de linha de comando:
+1°) Primeiramente clone o repositório.
+2°) Segundo, faça a instalação do arquivo requirements.txt
 
-pip install yt-dlp
-
-2°) Após ter feito a instalação deste módulo, clone o repositório:
-
-https://github.com/Rodrigo-Kelven/DownLoad_Video_YouTube
+pip install -r requirements.txt
 
 3°) Seja feliz e execute o programa 😁
 
