@@ -1,11 +1,19 @@
-import yt_dlp
+from pytube import YouTube
 
-# Faz um input da URL do vídeo que será baixado
-url = input("Enter the YouTube video URL: ")
+def baixar_video(url):
+    try:
+        # Cria um objeto YouTube
+        yt = YouTube(url)
 
-ydl_opts= {}
+        # Seleciona a stream de maior resolução disponível
+        stream = yt.streams.get_highest_resolution()
 
-with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-    ydl.download([url])
+        # Baixa o vídeo para o caminho especificado
+        stream.download(output_path=caminho_destino)
+        print(f"Download concluído! Vídeo salvo em: {caminho_destino}")
+    except Exception as e:
+        print(f"Erro ao baixar o vídeo: {e}")
 
-print("Download complete!")
+# Exemplo de uso
+url_video = input("Digite a URL do vídeo que deseja!: )
+baixar_video(url_video)
