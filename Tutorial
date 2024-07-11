@@ -1,7 +1,7 @@
 1°) Primeiramente clone o repositório.
 2°) Segundo, faça a instalação do arquivo requirements.txt
 
-pip install -r requirements.txt
+pip install -U -r requirements.txt
 
 3°) Seja feliz e execute o programa 😁
 
