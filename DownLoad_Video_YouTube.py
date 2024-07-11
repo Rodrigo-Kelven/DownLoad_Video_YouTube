@@ -1,19 +1,21 @@
-from pytube import YouTube
+import yt_dlp
 
 def baixar_video(url):
+    ydl_opts = {
+        'outtmpl': '%(title)s.%(ext)s',  # Define o formato de saída do arquivo
+        'http_headers': {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+        },
+        # 'cookiefile': 'cookies.txt',  # Descomente e forneça o caminho para o arquivo de cookies se necessário
+    }
+
     try:
-        # Cria um objeto YouTube
-        yt = YouTube(url)
-
-        # Seleciona a stream de maior resolução disponível
-        stream = yt.streams.get_highest_resolution()
-
-        # Baixa o vídeo para o caminho especificado
-        stream.download(output_path=caminho_destino)
-        print(f"Download concluído! Vídeo salvo em: {caminho_destino}")
-    except Exception as e:
+        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+            ydl.download([url])
+        print("Download completo!")
+    except yt_dlp.utils.DownloadError as e:
         print(f"Erro ao baixar o vídeo: {e}")
 
 # Exemplo de uso
-url_video = input("Digite a URL do vídeo que deseja!: ")
+url_video = input("Enter the YouTube video URL: ")
 baixar_video(url_video)
