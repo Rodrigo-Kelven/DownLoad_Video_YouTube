@@ -17,5 +17,5 @@ def baixar_video(url):
         print(f"Erro ao baixar o vídeo: {e}")
 
 # Exemplo de uso
-url_video = input("Enter the YouTube video URL: ")
+url_video = input("Coloque a URL que deseja: ")
 baixar_video(url_video)
